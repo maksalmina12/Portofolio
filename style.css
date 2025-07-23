@@ -1,3 +1,8 @@
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
 /* Reset dasar */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -32,6 +37,10 @@ nav {
   flex-wrap: wrap;
   margin-bottom: 15px;
 }
+    
+<div class="mode-toggle">
+  <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</div>
 
 nav a {
   text-decoration: none;
