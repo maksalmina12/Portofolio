@@ -11,6 +11,7 @@ body {
   background-color: #f2f4f8;
   color: #333;
   transition: all 0.3s ease-in-out;
+  <body class="no-animation";
 }
 
 .container {
@@ -148,4 +149,14 @@ body.dark-mode main {
 
 body.dark-mode footer {
   color: #999;
+}
+
+/* Tambahkan jarak antar tombol menu */
+nav a {
+  margin: 5px;
+}
+
+/* Hilangkan animasi di halaman yang pakai class 'no-animation' */
+body.no-animation main {
+  animation: none !important;
 }
