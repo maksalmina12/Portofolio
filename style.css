@@ -1,202 +1,146 @@
-<script>
-  function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-  }
-</script>
-/* Khusus jika pakai animasi */
-body.no-animation main {
-  margin-top: 30px;
-  animation: none !important;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Maksalmina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #00ffc3;
+      --background: #0d1117;
+      --text-color: #eaeaea;
+      --card-bg: #161b22;
+      --highlight: #00ffc3;
+    }
 
-/* Reset dasar */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f2f4f8;
-  color: #333;
-  transition: all 0.3s ease-in-out;
-  <body class="no-animation";
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-}
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
 
-/* Header */
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
 
-h1 {
-  font-size: 32px;
-}
+    header h1 {
+      font-size: 2.5em;
+      color: var(--highlight);
+    }
 
-/* Navbar */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
-}
-    
-<div class="mode-toggle">
-  <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
-</div>
+    .tagline {
+      font-size: 1.2em;
+      opacity: 0.7;
+    }
 
-nav a {
-  text-decoration: none;
-  background-color: #000;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: #111;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
 
-nav a:hover {
-  background-color: #2a7de1;
-}
+    nav a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease;
+    }
 
-/* Dark mode toggle */
-.mode-toggle {
-  text-align: center;
-  margin-bottom: 30px;
-}
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: width 0.3s ease;
+    }
 
-.mode-toggle button {
-  background-color: #333;
-  color: white;
-  padding: 8px 18px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+    nav a:hover::after {
+      width: 100%;
+    }
 
-.mode-toggle button:hover {
-  background-color: #555;
-}
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 195, 0.15);
+      text-align: center;
+    }
 
-/* Main Content */
-main {
-  text-align: center;
-  background-color: white;
-  padding: 40px 20px 50px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  margin: 0 auto 40px;
-  max-width: 700px;
-  animation: fadeIn 1s ease;
-}
+    .gif {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
 
-main img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #ddd;
-  margin-top: -70px;
-  margin-bottom: 20px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-}
+    .intro-text {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
 
-h2 {
-  margin-bottom: 10px;
-  font-size: 24px;
-  font-weight: bold;
-}
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
 
-main p {
-  margin: 6px 0;
-  font-size: 15px;
-  line-height: 1.6;
-  font-weight: 500;
-}
+    .project-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #2d2d2d;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 14px;
-  color: #666;
-  padding: 20px;
-}
+    .project-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px var(--primary-color);
+    }
 
-/* Fade in animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+      color: #888;
+    }
 
-/* Dark Mode */
-body.dark-mode {
-  background-color: #1e1e1e;
-  color: #ddd;
-}
+    h2 {
+      color: var(--highlight);
+      margin-bottom: 20px;
+    }
 
-body.dark-mode nav a {
-  background-color: #444;
-  color: white;
-}
+    ul {
+      list-style-type: none;
+      text-align: left;
+      padding-left: 0;
+    }
 
-body.dark-mode nav a:hover {
-  background-color: #2a7de1;
-}
+    ul li {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #1c1f26;
+      border-left: 4px solid var(--highlight);
+      border-radius: 8px;
+    }
 
-body.dark-mode main {
-  background-color: #2c2c2c;
-  color: #eee;
-}
-
-body.dark-mode footer {
-  color: #999;
-}
-
-/* Tambahkan jarak antar tombol menu */
-nav a {
-  margin: 5px;
-}
-
-/* Hilangkan animasi di halaman yang pakai class 'no-animation' */
-body.no-animation main {
-  animation: none !important;
-}
-
-.project-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.project-gallery img {
-  width: calc(33.33% - 10px);
-  max-width: 200px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-@media (max-width: 768px) {
-  .project-gallery img {
-    width: calc(50% - 10px);
-  }
-}
-
-@media (max-width: 480px) {
-  .project-gallery img {
-    width: 100%;
-  }
-}
-
+    strong {
+      color: var(--highlight);
+    }
