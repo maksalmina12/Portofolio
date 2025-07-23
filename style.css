@@ -1,146 +1,69 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Maksalmina</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #00ffc3;
-      --background: #0d1117;
-      --text-color: #eaeaea;
-      --card-bg: #161b22;
-      --highlight: #00ffc3;
-    }
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  line-height: 1.6;
+  padding: 20px;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--background);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
+/* Navigasi */
+nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    header {
-      text-align: center;
-      padding: 50px 20px 20px;
-    }
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #bb86fc;
+  font-weight: bold;
+}
 
-    header h1 {
-      font-size: 2.5em;
-      color: var(--highlight);
-    }
+nav a:hover {
+  text-decoration: underline;
+}
 
-    .tagline {
-      font-size: 1.2em;
-      opacity: 0.7;
-    }
+/* Judul halaman */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-      background-color: #111;
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222;
-    }
+/* Container umum */
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
 
-    nav a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-      transition: color 0.3s ease;
-    }
+/* Gambar responsif */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
 
-    nav a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: var(--primary-color);
-      transition: width 0.3s ease;
-    }
+/* List project */
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
 
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 20px;
-      background-color: var(--card-bg);
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 255, 195, 0.15);
-      text-align: center;
-    }
-
-    .gif {
-      max-width: 100%;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-
-    .intro-text {
-      font-size: 1.1em;
-      margin-bottom: 30px;
-    }
-
-    .project-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .project-gallery img {
-      width: 100%;
-      border-radius: 10px;
-      border: 2px solid #2d2d2d;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project-gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 10px var(--primary-color);
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9em;
-      color: #888;
-    }
-
-    h2 {
-      color: var(--highlight);
-      margin-bottom: 20px;
-    }
-
-    ul {
-      list-style-type: none;
-      text-align: left;
-      padding-left: 0;
-    }
-
-    ul li {
-      margin-bottom: 20px;
-      padding: 15px;
-      background-color: #1c1f26;
-      border-left: 4px solid var(--highlight);
-      border-radius: 8px;
-    }
-
-    strong {
-      color: var(--highlight);
-    }
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+  font-size: 0.9em;
+}
