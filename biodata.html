@@ -5,11 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biodata</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 20px;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      right: -220px;
+      height: 100%;
+      width: 200px;
+      background-color: #1f1f1f;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.3s ease-in-out;
+    }
+
+    nav.show {
+      right: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 10px 0;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #1db954;
+    }
+
+    #biodata {
+      padding-top: 100px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
   </header>
   <nav id="navMenu">
     <a href="index.html">Home</a>
@@ -19,12 +93,12 @@
   </nav>
 
   <section id="biodata">
-    <img src="IMG_20230712_152806.jpg" alt="Foto Profil">
-    <div class="skills">
-      <h2>Keahlian</h2>
-      <p>Software Engineering, Cybersecurity, UI/UX, Database Design</p>
-      <h2>Skill</h2>
-      <p>Python, HTML/CSS, JavaScript, SQL, Git</p>
+    <img src="IMG_20230712_152806.jpg" alt="Foto Profil" class="profile-img">
+    <div class="info">
+      <h2>MAKSALMINA</h2>
+      <p>Mahasiswa Teknik Komputer dengan fokus pada Software Engineering, Cybersecurity, UI/UX Design, dan Database Design.</p>
+      <p>Terampil dalam Python, pengelolaan database, serta sistem operasi. Memiliki minat pada pengembangan solusi perangkat lunak yang aman, efisien, dan ramah pengguna.</p>
+      <p>Berpengalaman sebagai Video Editor dan Team Leader.</p>
     </div>
   </section>
 
