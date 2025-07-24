@@ -1,84 +1,75 @@
+/* style.css */
 body {
+  font-family: 'Inter', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
   margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background-color: #0f0f0f;
-  color: #f0f0f0;
-  overflow-x: hidden;
 }
 
 header {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1000;
   padding: 20px;
 }
 
 .menu-toggle {
-  font-size: 30px;
+  font-size: 24px;
+  background: none;
+  border: none;
   cursor: pointer;
+  color: #ffffff;
 }
 
 nav {
   position: fixed;
   top: 0;
-  right: -200px;
+  right: -220px;
   height: 100%;
   width: 200px;
-  background: #1a1a1a;
-  transition: right 0.3s ease;
+  background-color: #1f1f1f;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  padding: 60px 20px;
   display: flex;
   flex-direction: column;
-  padding: 60px 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #f0f0f0;
-  margin: 20px 0;
-  font-weight: bold;
+  transition: right 0.3s ease-in-out;
 }
 
 nav.show {
   right: 0;
 }
 
-section {
-  min-height: 100vh;
-  padding: 100px 20px 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#home img {
-  width: 300px;
-}
-
-#biodata img {
-  width: 150px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.skills {
-  text-align: center;
-}
-
-.project {
-  margin-bottom: 40px;
-}
-
-.project img {
-  width: 150px;
-  margin: 5px;
-  border-radius: 10px;
-}
-
-.contact-icons a {
-  margin: 10px;
-  font-size: 30px;
-  color: #f0f0f0;
+nav a {
   text-decoration: none;
+  color: #ffffff;
+  padding: 10px 0;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #1db954;
+}
+
+section {
+  padding: 100px 20px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
