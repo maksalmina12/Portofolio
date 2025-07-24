@@ -1,41 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <header>
-  <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-  <button id="themeToggle">🌓</button>
-</header>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beranda</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-
-    <script>
-  function toggleMenu() {
-    document.getElementById('navMenu').classList.toggle('show');
-  }
-
-  const toggleButton = document.getElementById('themeToggle');
-  const body = document.body;
-
-  // Terapkan tema dari localStorage
-  if (localStorage.getItem('theme') === 'light') {
-    body.classList.add('light');
-  }
-
-  toggleButton.addEventListener('click', () => {
-    body.classList.toggle('light');
-    if (body.classList.contains('light')) {
-      localStorage.setItem('theme', 'light');
-    } else {
-      localStorage.setItem('theme', 'dark');
-    }
-  });
-</script>
-
     body {
       font-family: 'Inter', sans-serif;
       background-color: #121212;
@@ -48,6 +19,7 @@
       top: 0;
       right: 0;
       padding: 20px;
+      z-index: 999;
     }
 
     .menu-toggle {
@@ -93,22 +65,44 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
+      padding: 40px 20px;
       text-align: center;
-      padding: 0 20px;
     }
 
     .welcome-text {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 600;
-      color: #ffffff;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+    }
+
+    .subtext {
+      font-size: 16px;
+      color: #aaaaaa;
+      margin-bottom: 30px;
+      max-width: 500px;
     }
 
     .gif-container img {
-      width: 280px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+      width: 320px;
+      max-width: 90%;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .gif-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 600px) {
+      .welcome-text {
+        font-size: 24px;
+      }
+      .gif-container img {
+        width: 260px;
+      }
     }
   </style>
 </head>
@@ -116,6 +110,7 @@
   <header>
     <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
   </header>
+
   <nav id="navMenu">
     <a href="index.html">Home</a>
     <a href="biodata.html">Biodata</a>
@@ -125,6 +120,9 @@
 
   <section id="home">
     <div class="welcome-text">Selamat Datang di Portofolio Saya</div>
+    <div class="subtext">
+      Saya adalah mahasiswa Teknik Komputer yang fokus pada pengembangan software, desain UI/UX, dan keamanan siber. Yuk, jelajahi karya dan profil saya!
+    </div>
     <div class="gif-container">
       <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="GIF Coding">
     </div>
