@@ -2,101 +2,36 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Biodata Saya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f9fc;
-      color: #333;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    header, footer {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #2a7de1;
-      font-weight: 500;
-    }
-
-    main {
-      text-align: center;
-      background-color: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #ddd;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      margin: 10px 0 5px;
-    }
-
-    p {
-      margin: 6px 0;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    footer {
-      font-size: 13px;
-      color: #666;
-      margin-top: 40px;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Biodata</h1>
-    </header>
+  <header>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+  </header>
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="biodata.html">Biodata</a>
+    <a href="project.html">Project</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    <nav>
-      <a href="index.html">🏠 Home</a>
-      <a href="biodata.html">🧑 Biodata</a>
-      <a href="project.html">💼 Project</a>
-      <a href="contact.html">📩 Contact</a>
-    </nav>
+  <section id="biodata">
+    <img src="IMG_20230712_152806.jpg" alt="Foto Profil">
+    <div class="skills">
+      <h2>Keahlian</h2>
+      <p>Software Engineering, Cybersecurity, UI/UX, Database Design</p>
+      <h2>Skill</h2>
+      <p>Python, HTML/CSS, JavaScript, SQL, Git</p>
+    </div>
+  </section>
 
-    <main>
-      <img src="IMG_20230712_152806.jpg" alt="Foto Profil">
-      <h2>MAKSALMINA</h2>
-      <p><strong>Mahasiswa Teknik Komputer</strong> dari Universitas Syiah Kuala</p>
-      <p><strong>Fokus pada:<strong> Software Engineering, Cybersecurity, UI/UX Design, Desain Database</p>
-      <p><strong>Kemampuan:<strong> HTML, CSS, Python, SQL, Linux</p>
-      <p><strong>Pengalaman:<strong> Team Leader Project HCI, Video Editor, Web Developer, Sutradara</p>
-    </main>
-
-    <footer>
-      &copy; 2025 MAKSALMINA dibuat dengan secangkir kopi ☕
-    </footer>
-  </div>
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
