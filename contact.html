@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>CONTACT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Kontak Saya</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
   </header>
-
-  <nav>
+  <nav id="navMenu">
     <a href="index.html">Home</a>
     <a href="biodata.html">Biodata</a>
     <a href="project.html">Project</a>
     <a href="contact.html">Contact</a>
   </nav>
 
-  <main>
-    <h2>Hubungi Saya</h2>
-    <p> Email: maksalbusiness@gmail.com</p>
-    <p> Instagram: @mksllll</p>
-    <p> Facebook: @mksllll</p>
-    <p> Linkedin: MAKSALMINA ARINA </p>
-  </main>
+  <section id="contact">
+    <div class="contact-icons">
+      <a href="maksalbusiness@gmail.com">📧</a>
+      <a href="https://instagram.com/mksllll">📷</a>
+      <a href="https://facebook.com/mksllll">📘</a>
+      <a href="https://linkedin.com/in/MAKSALMINA ARINA">💼</a>
+    </div>
+  </section>
 
-  <footer>
-    &copy; 2025 MAKSALMINA dibuat dengan secangkir kopi ☕
-  </footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
