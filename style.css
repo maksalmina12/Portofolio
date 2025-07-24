@@ -1,4 +1,3 @@
-/* style.css */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #121212;
@@ -74,11 +73,26 @@ img {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Efek hover pada gambar */
 img:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
+}
+
+/* Tambahan khusus untuk GIF coding di tengah */
+.gif-center {
+  display: block;
+  margin: 40px auto;
+  width: 400px;
+  max-width: 90%;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.gif-center:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
 
 /* Tombol theme toggle */
@@ -119,4 +133,8 @@ body.light img:hover {
 
 body.light #themeToggle {
   color: #1a1a1a;
+}
+
+body.light .gif-center:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
