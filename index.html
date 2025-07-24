@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio MAKSALMINA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Halo, saya <span class="highlight">MAKSALMINA</span></h1>
-    <p class="tagline">MOHON MAAF Portofolio masih dalam proses development jadi masih banyak kekurangan</p>
-    <img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Developer GIF" class="gif">
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
   </header>
-  <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="biodata.html">🧑‍💻 Biodata</a>
-    <a href="project.html">💼 Project</a>
-    <a href="contact.html">📋 Contact</a>
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="biodata.html">Biodata</a>
+    <a href="project.html">Project</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="container">
-    <img src="https://ouch-cdn2.icons8.com/KXAc8yuvJRCsq6YCe3RPSnbXH4E3T4iQYfJfRWXZc1E/rs:fit:512:512/czM6Ly9pY29uczgvZXNzZW50aWFscy1wYWdlcy9sYXB0b3AtY2hhcnQucG5n.png" alt="Coding Illustration">
+  <section id="home">
+    <img src="https://undraw.co/api/illustrations/7bb13e3b-bbbf-4c57-8f48-90dcf53560d3" alt="Vector Komputer">
+  </section>
 
-    <p>Selamat datang! Saya adalah mahasiswa Teknik Komputer yang memiliki keahlian dalam public speaking, kepemimpinan tim, dan pengalaman sebagai asisten dosen selama 2 semester. Terbiasa bekerja secara terorganisir dan disiplin. Saya juga memiliki pemahaman mendalam tentang UI/UX di Figma, serta mahir menggunakan Adobe, Canva, dan Capcut untuk desain dan video editing.</p>
-  </div>
-
-  <footer>© 2025 Portofolio Maksalmina</footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
