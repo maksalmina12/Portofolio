@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Project</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
   <header>
     <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
   </header>
+
   <nav id="navMenu">
     <a href="index.html">Home</a>
     <a href="biodata.html">Biodata</a>
@@ -18,39 +19,40 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section id="project">
-    <div class="project">
+  <main id="project">
+    <section class="project">
       <h2>SumurTani</h2>
       <p> Aplikasi bantu petani saat kekeringan dengan sistem marketplace. <br>
         Saya berkontribusi sebagai team leader yang mengatur jadwal survey, observasi, dan evaluasi project. <br>
         Saya juga ikut dalam proses desain UI/UX menggunakan FIGMA..</p>
-      <div>
+      <div class="project-images">
         <img src="sumurtani1.png" alt="Dokumentasi 1">
         <img src="sumurtani2.png" alt="Dokumentasi 2">
         <img src="sumurtani3.png" alt="Dokumentasi 3">
         <img src="sumurtani4.png" alt="Dokumentasi 4">
         <img src="sumurtani5.png" alt="Dokumentasi 5">
       </div>
-    </div>
+    </section>
+
+    <section class="project">
       <h2>ClimaApp</h2>
       <p> Aplikasi yang membantu Masyarakat dalam memonitor kebersihan air dan edukasi mengenai Emisi Karbon,<br>
        yang dimana aplikasi ini dioorganisir oleh Komunitas Lingkungan. Komunitas Lingkungan dan Masyarakat dapat berkomunikasi dan bisa berdonasi <br>
        untuk kebutuhan Emisi Karbon dan yang lainnya.</p>
-      <div>
+      <div class="project-images">
         <img src="sumurtani1.png" alt="Dokumentasi 1">
         <img src="sumurtani2.png" alt="Dokumentasi 2">
         <img src="sumurtani3.png" alt="Dokumentasi 3">
         <img src="sumurtani4.png" alt="Dokumentasi 4">
         <img src="sumurtani5.png" alt="Dokumentasi 5">
       </div>
-    <!-- Tambahkan project lain di sini -->
-  </section>
+    </section>
+  </main>
 
   <script>
     function toggleMenu() {
-      document.getElementById('navMenu').classList.toggle('show');
+      document.getElementById("navMenu").classList.toggle("show");
     }
   </script>
 </body>
 </html>
-
