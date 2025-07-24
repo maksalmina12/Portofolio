@@ -120,19 +120,3 @@ body.light img:hover {
 body.light #themeToggle {
   color: #1a1a1a;
 }
-
-.luffy-run {
-  position: absolute;
-  top: 15px;
-  left: -150px;
-  width: 100px;
-  z-index: 10;
-  animation: moveAcross 10s linear infinite;
-  opacity: 0.9;
-}
-
-@keyframes moveAcross {
-  0% { left: -150px; }
-  100% { left: 100%; }
-}
-
