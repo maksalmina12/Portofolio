@@ -6,6 +6,52 @@
   <title>Kontak</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    #contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .contact-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .contact-icons a {
+      font-size: 40px;
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      padding: 20px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .contact-icons a:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+    }
+
+    .contact-heading {
+      font-size: 32px;
+      color: #00ffff;
+      border-bottom: 2px solid #00ffff;
+      padding-bottom: 10px;
+    }
+
+    .contact-description {
+      font-size: 16px;
+      max-width: 600px;
+      line-height: 1.6;
+      color: #cccccc;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -19,11 +65,15 @@
   </nav>
 
   <section id="contact">
+    <div class="contact-heading">Hubungi Saya</div>
+    <div class="contact-description">
+      Anda dapat menghubungi saya melalui platform berikut. Saya terbuka untuk kolaborasi, pertanyaan, atau sekadar menyapa.
+    </div>
     <div class="contact-icons">
-      <a href="maksalbusiness@gmail.com">📧</a>
-      <a href="https://instagram.com/mksllll">📷</a>
-      <a href="https://facebook.com/mksllll">📘</a>
-      <a href="https://linkedin.com/in/MAKSALMINA ARINA">💼</a>
+      <a href="maksalbusiness@gmail.com" title="Email">📧</a>
+      <a href="https://instagram.com/mksllll" title="Instagram">📷</a>
+      <a href="https://facebook.com/mksllll" title="Facebook">📘</a>
+      <a href="https://linkedin.com/in/MAKSALMINA ARINA" title="LinkedIn">💼</a>
     </div>
   </section>
 
