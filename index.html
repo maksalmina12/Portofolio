@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+  <header>
+  <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+  <button id="themeToggle">🌓</button>
+</header>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beranda</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+
+    <script>
+  function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('show');
+  }
+
+  const toggleButton = document.getElementById('themeToggle');
+  const body = document.body;
+
+  // Terapkan tema dari localStorage
+  if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light');
+  }
+
+  toggleButton.addEventListener('click', () => {
+    body.classList.toggle('light');
+    if (body.classList.contains('light')) {
+      localStorage.setItem('theme', 'light');
+    } else {
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+</script>
+
     body {
       font-family: 'Inter', sans-serif;
       background-color: #121212;
