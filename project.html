@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Project</h1>
-
-  <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="biodata.html">🧑‍💻 Biodata</a>
-    <a href="project.html">💼 Project</a>
-    <a href="contact.html">📋 Contact</a>
+  <header>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+  </header>
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="biodata.html">Biodata</a>
+    <a href="project.html">Project</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="container">
-    <h2>Daftar Proyek</h2>
-    <ul>
-      <li>
-        <strong>SumurTani App</strong> – Aplikasi bantu petani saat kekeringan dengan sistem marketplace. <br>
+  <section id="project">
+    <div class="project">
+      <h2>SumurTani</h2>
+      <p> Aplikasi bantu petani saat kekeringan dengan sistem marketplace. <br>
         Saya berkontribusi sebagai team leader yang mengatur jadwal survey, observasi, dan evaluasi project. <br>
-        Saya juga ikut dalam proses desain UI/UX menggunakan FIGMA.
-        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-          <img src="sumurtani1.png" alt="Dokumentasi 1" style="width: 150px;">
-          <img src="sumurtani2.png" alt="Dokumentasi 2" style="width: 150px;">
-          <img src="sumurtani3.png" alt="Dokumentasi 3" style="width: 150px;">
-          <img src="sumurtani4.png" alt="Dokumentasi 4" style="width: 150px;">
-          <img src="sumurtani5.png" alt="Dokumentasi 5" style="width: 150px;">
-        </div>
-      </li>
-      <li style="margin-top: 20px;">
-        <strong>Website Edukasi IT</strong> – Aplikasi yang membantu Masyarakat dalam memonitor kebersihan air dan edukasi mengenai Emisi Karbon,<br>
+        Saya juga ikut dalam proses desain UI/UX menggunakan FIGMA..</p>
+      <div>
+        <img src="sumurtani1.png" alt="Dokumentasi 1">
+        <img src="sumurtani2.png" alt="Dokumentasi 2">
+        <img src="sumurtani3.png" alt="Dokumentasi 3">
+        <img src="sumurtani4.png" alt="Dokumentasi 4">
+        <img src="sumurtani5.png" alt="Dokumentasi 5">
+      </div>
+    </div>
+      <h2>ClimaApp</h2>
+      <p> Aplikasi yang membantu Masyarakat dalam memonitor kebersihan air dan edukasi mengenai Emisi Karbon,<br>
        yang dimana aplikasi ini dioorganisir oleh Komunitas Lingkungan. Komunitas Lingkungan dan Masyarakat dapat berkomunikasi dan bisa berdonasi <br>
-       untuk kebutuhan Emisi Karbon dan yang lainnya.
-      </li>
-    </ul>
-  </div>
+       untuk kebutuhan Emisi Karbon dan yang lainnya.</p>
+      <div>
+        <img src="sumurtani1.png" alt="Dokumentasi 1">
+        <img src="sumurtani2.png" alt="Dokumentasi 2">
+        <img src="sumurtani3.png" alt="Dokumentasi 3">
+        <img src="sumurtani4.png" alt="Dokumentasi 4">
+        <img src="sumurtani5.png" alt="Dokumentasi 5">
+      </div>
+    <!-- Tambahkan project lain di sini -->
+  </section>
 
-  <footer>© 2025 Portofolio Maksalmina</footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
 
