@@ -12,6 +12,7 @@
       background-color: #121212;
       color: #ffffff;
       margin: 0;
+      overflow-x: hidden;
     }
 
     header {
@@ -68,6 +69,8 @@
       min-height: 100vh;
       padding: 40px 20px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     .welcome-text {
@@ -96,12 +99,39 @@
       box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
     }
 
+    .luffy-run {
+      position: absolute;
+      top: 20px;
+      left: -200px;
+      width: 150px;
+      z-index: 0;
+      animation: moveLuffy 12s linear infinite;
+      opacity: 0.9;
+    }
+
+    @keyframes moveLuffy {
+      0% { left: -200px; }
+      100% { left: 100vw; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #bbbbbb;
+      border-top: 1px solid #333;
+      margin-top: 50px;
+    }
+
     @media (max-width: 600px) {
       .welcome-text {
         font-size: 24px;
       }
       .gif-container img {
         width: 260px;
+      }
+      .luffy-run {
+        width: 100px;
       }
     }
   </style>
@@ -119,6 +149,9 @@
   </nav>
 
   <section id="home">
+    <!-- Luffy GIF -->
+    <img class="luffy-run" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWRuODl0Y2wxdmN0ZTIxazhkYmtzeWlybXRzMmc5a2dzNXZ5YzZkZiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/I8O9yMZWTLMBO/giphy.gif" alt="Luffy Running" />
+
     <div class="welcome-text">Selamat Datang di Portofolio Saya</div>
     <div class="subtext">
       Saya adalah mahasiswa Teknik Komputer yang fokus pada pengembangan software, desain UI/UX, dan keamanan siber. Yuk, jelajahi karya dan profil saya!
@@ -127,6 +160,10 @@
       <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="GIF Coding">
     </div>
   </section>
+
+  <footer>
+    &copy; 2025 Dibuat dengan secangkir kopi ☕
+  </footer>
 
   <script>
     function toggleMenu() {
