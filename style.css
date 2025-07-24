@@ -73,3 +73,51 @@ img {
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
+
+/* Efek hover pada gambar */
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Tombol theme toggle */
+#themeToggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+/* Light mode */
+body.light {
+  background-color: #f7f7f7;
+  color: #1a1a1a;
+}
+
+body.light nav {
+  background-color: #ffffff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body.light nav a {
+  color: #1a1a1a;
+}
+
+body.light nav a:hover {
+  color: #0077cc;
+}
+
+body.light img:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.light #themeToggle {
+  color: #1a1a1a;
+}
+
