@@ -30,11 +30,11 @@
         Saya juga ikut dalam proses desain UI/UX menggunakan FIGMA.
       </p>
       <div class="project-images">
-        <img src="sumurtani1.png" alt="Dokumentasi 1" />
-        <img src="sumurtani2.png" alt="Dokumentasi 2" />
-        <img src="sumurtani3.png" alt="Dokumentasi 3" />
-        <img src="sumurtani4.png" alt="Dokumentasi 4" />
-        <img src="sumurtani5.png" alt="Dokumentasi 5" />
+        <img src="sumurtani1.png" alt="Dokumentasi 1" onclick="openPreview(this.src)" />
+        <img src="sumurtani2.png" alt="Dokumentasi 2" onclick="openPreview(this.src)" />
+        <img src="sumurtani3.png" alt="Dokumentasi 3" onclick="openPreview(this.src)" />
+        <img src="sumurtani4.png" alt="Dokumentasi 4" onclick="openPreview(this.src)" />
+        <img src="sumurtani5.png" alt="Dokumentasi 5" onclick="openPreview(this.src)" />
       </div>
     </section>
 
@@ -47,18 +47,32 @@
         untuk kebutuhan Emisi Karbon dan lainnya.
       </p>
       <div class="project-images">
-        <img src="clima1.jpg" alt="Dokumentasi 1" />
-        <img src="clima2.PNG" alt="Dokumentasi 2" />
-        <img src="clima3.jpg" alt="Dokumentasi 3" />
-        <img src="clima4.jpg" alt="Dokumentasi 4" />
-        <img src="clima5.jpg" alt="Dokumentasi 5" />
+        <img src="clima1.jpg" alt="Dokumentasi 1" onclick="openPreview(this.src)" />
+        <img src="clima2.PNG" alt="Dokumentasi 2" onclick="openPreview(this.src)" />
+        <img src="clima3.jpg" alt="Dokumentasi 3" onclick="openPreview(this.src)" />
+        <img src="clima4.jpg" alt="Dokumentasi 4" onclick="openPreview(this.src)" />
+        <img src="clima5.jpg" alt="Dokumentasi 5" onclick="openPreview(this.src)" />
       </div>
     </section>
   </main>
 
+  <!-- Modal Preview Gambar -->
+  <div id="imgModal" class="img-modal" onclick="closePreview()">
+    <img id="imgModalContent" />
+  </div>
+
   <script>
     function toggleMenu() {
       document.getElementById("navMenu").classList.toggle("show");
+    }
+
+    function openPreview(src) {
+      document.getElementById("imgModal").style.display = "flex";
+      document.getElementById("imgModalContent").src = src;
+    }
+
+    function closePreview() {
+      document.getElementById("imgModal").style.display = "none";
     }
   </script>
 </body>
