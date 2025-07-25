@@ -174,36 +174,36 @@ body.home .luffy-run {
   pointer-events: none;
 }
 
-/* Project image gallery - estetik masonry layout */
 .project-images {
-  column-count: 3;
-  column-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
   margin-top: 20px;
 }
 
-.project-images img {
+/* Gaya estetik acak */
+.estetik-grid img {
+  border-radius: 16px;
+  object-fit: cover;
   width: 100%;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  display: block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  break-inside: avoid;
+  height: auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
 }
 
-.project-images img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+.estetik-grid img:hover {
+  transform: scale(1.03);
 }
 
-/* Responsive layout */
-@media (max-width: 1024px) {
-  .project-images {
-    column-count: 2;
-  }
+/* Ukuran khusus untuk layout acak */
+.estetik-grid img.big {
+  grid-column: span 2;
 }
 
-@media (max-width: 600px) {
-  .project-images {
-    column-count: 1;
-  }
+.estetik-grid img.wide {
+  aspect-ratio: 16/9;
+}
+
+.estetik-grid img.tall {
+  aspect-ratio: 3/4;
 }
