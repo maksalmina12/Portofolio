@@ -30,11 +30,11 @@
         Saya juga ikut dalam proses desain UI/UX menggunakan FIGMA.
       </p>
       <div class="project-images">
-        <img src="sumurtani1.png" alt="Dokumentasi 1" onclick="openPreview(this.src)" />
-        <img src="sumurtani2.png" alt="Dokumentasi 2" onclick="openPreview(this.src)" />
-        <img src="sumurtani3.png" alt="Dokumentasi 3" onclick="openPreview(this.src)" />
-        <img src="sumurtani4.png" alt="Dokumentasi 4" onclick="openPreview(this.src)" />
-        <img src="sumurtani5.png" alt="Dokumentasi 5" onclick="openPreview(this.src)" />
+        <img src="sumurtani1.png" alt="Dokumentasi 1" />
+        <img src="sumurtani2.png" alt="Dokumentasi 2" />
+        <img src="sumurtani3.png" alt="Dokumentasi 3" />
+        <img src="sumurtani4.png" alt="Dokumentasi 4" />
+        <img src="sumurtani5.png" alt="Dokumentasi 5" />
       </div>
     </section>
 
@@ -47,19 +47,19 @@
         untuk kebutuhan Emisi Karbon dan lainnya.
       </p>
       <div class="project-images">
-        <img src="clima1.jpg" alt="Dokumentasi 1" onclick="openPreview(this.src)" />
-        <img src="clima2.PNG" alt="Dokumentasi 2" onclick="openPreview(this.src)" />
-        <img src="clima3.jpg" alt="Dokumentasi 3" onclick="openPreview(this.src)" />
-        <img src="clima4.jpg" alt="Dokumentasi 4" onclick="openPreview(this.src)" />
-        <img src="clima5.jpg" alt="Dokumentasi 5" onclick="openPreview(this.src)" />
+        <img src="clima1.jpg" alt="Dokumentasi 1" />
+        <img src="clima2.PNG" alt="Dokumentasi 2" />
+        <img src="clima3.jpg" alt="Dokumentasi 3" />
+        <img src="clima4.jpg" alt="Dokumentasi 4" />
+        <img src="clima5.jpg" alt="Dokumentasi 5" />
       </div>
     </section>
   </main>
 
-  <!-- Modal Preview -->
-  <div id="imgModal" class="img-modal">
-    <span class="close-btn" onclick="closePreview()">❮</span>
-    <img id="imgModalContent" src="" alt="Preview" />
+  <!-- Popup Preview -->
+  <div class="popup-overlay" id="popupOverlay">
+    <span class="popup-close" onclick="closePopup()">❮</span>
+    <img class="popup-image" id="popupImage" src="" alt="Preview" />
   </div>
 
   <script>
@@ -67,23 +67,25 @@
       document.getElementById("navMenu").classList.toggle("show");
     }
 
-    function openPreview(src) {
-      document.getElementById("imgModal").style.display = "flex";
-      document.getElementById("imgModalContent").src = src;
+    const images = document.querySelectorAll(".project-images img");
+    const popupOverlay = document.getElementById("popupOverlay");
+    const popupImage = document.getElementById("popupImage");
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        popupImage.src = img.src;
+        popupOverlay.classList.add("show");
+      });
+    });
+
+    function closePopup() {
+      popupOverlay.classList.remove("show");
+      popupImage.src = "";
     }
 
-    function closePreview() {
-      document.getElementById("imgModal").style.display = "none";
-      document.getElementById("imgModalContent").src = "";
-    }
-
-    // Tutup modal dengan ESC atau F
-    document.addEventListener("keydown", function(event) {
-      const modal = document.getElementById("imgModal");
-      if (modal.style.display === "flex") {
-        if (event.key === "Escape" || event.key.toLowerCase() === "f") {
-          closePreview();
-        }
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" || e.key.toLowerCase() === "f") {
+        closePopup();
       }
     });
   </script>
