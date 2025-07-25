@@ -12,7 +12,10 @@
       background-color: #121212;
       color: #ffffff;
       margin: 0;
-      padding-bottom: 80px; /* ruang buat footer */
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
@@ -62,9 +65,11 @@
     }
 
     main {
+      flex: 1;
       padding-top: 100px;
       max-width: 1000px;
       margin: 0 auto;
+      padding-bottom: 40px;
     }
 
     .project {
@@ -74,16 +79,29 @@
     .project-images {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 15px;
-      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      justify-content: flex-start;
     }
 
     .project-images img {
-      max-width: 200px;
+      width: calc(33.33% - 10px); /* 3 gambar per baris */
+      min-width: 250px;
       height: auto;
-      border-radius: 8px;
+      border-radius: 10px;
       border: 2px solid #333;
+    }
+
+    @media (max-width: 800px) {
+      .project-images img {
+        width: calc(50% - 10px); /* 2 per baris di layar kecil */
+      }
+    }
+
+    @media (max-width: 500px) {
+      .project-images img {
+        width: 100%; /* 1 per baris di HP */
+      }
     }
 
     .footer {
@@ -91,9 +109,6 @@
       padding: 20px;
       background-color: #1f1f1f;
       color: #ffffff;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
       font-size: 14px;
     }
   </style>
