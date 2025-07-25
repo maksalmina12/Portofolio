@@ -139,3 +139,27 @@ body.light #themeToggle {
 body.light .gif-center:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
+
+/* Luffy Run Animation */
+@keyframes moveLuffy {
+  0% {
+    left: -150px;
+    filter: blur(2px);
+  }
+  50% {
+    filter: blur(0px);
+  }
+  100% {
+    left: 100%;
+    filter: blur(2px);
+  }
+}
+
+.luffy-run {
+  position: absolute;
+  top: 100px;
+  left: -150px;
+  width: 100px;
+  z-index: 2;
+  animation: moveLuffy 5s linear infinite;
+}
