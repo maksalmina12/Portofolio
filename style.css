@@ -1,65 +1,175 @@
-<!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Project</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
-  </head>
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+}
 
-  <body class="project">
-    <header>
-      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-    </header>
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
 
-    <nav id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="biodata.html">Biodata</a>
-      <a href="project.html">Project</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
 
-    <main id="project">
-      <!-- Project: SumurTani -->
-      <section class="project">
-        <h2>SumurTani</h2>
-        <p>
-          Aplikasi bantu petani saat kekeringan dengan sistem marketplace. <br>
-          Saya berkontribusi sebagai team leader yang mengatur jadwal survey, observasi, dan evaluasi project. <br>
-          Saya juga ikut dalam proses desain UI/UX menggunakan FIGMA.
-        </p>
-        <div class="project-images">
-          <img src="sumurtani1.png" alt="Dokumentasi 1" />
-          <img src="sumurtani2.png" alt="Dokumentasi 2" />
-          <img src="sumurtani3.png" alt="Dokumentasi 3" />
-          <img src="sumurtani4.png" alt="Dokumentasi 4" />
-          <img src="sumurtani5.png" alt="Dokumentasi 5" />
-        </div>
-      </section>
+nav {
+  position: fixed;
+  top: 0;
+  right: -220px;
+  height: 100%;
+  width: 200px;
+  background-color: #1f1f1f;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease-in-out;
+}
 
-      <!-- Project: ClimaApp -->
-      <section class="project">
-        <h2>ClimaApp</h2>
-        <p>
-          Aplikasi yang membantu masyarakat dalam memonitor kebersihan air dan edukasi mengenai Emisi Karbon. <br>
-          Aplikasi ini diorganisir oleh Komunitas Lingkungan. Komunitas dan masyarakat bisa berkomunikasi dan berdonasi <br>
-          untuk kebutuhan Emisi Karbon dan lainnya.
-        </p>
-        <div class="project-images">
-          <img src="clima1.jpg" alt="Dokumentasi 1" />
-          <img src="clima2.PNG" alt="Dokumentasi 2" />
-          <img src="clima3.jpg" alt="Dokumentasi 3" />
-          <img src="clima4.jpg" alt="Dokumentasi 4" />
-          <img src="clima5.jpg" alt="Dokumentasi 5" />
-        </div>
-      </section>
-    </main>
+nav.show {
+  right: 0;
+}
 
-    <script>
-      function toggleMenu() {
-        document.getElementById("navMenu").classList.toggle("show");
-      }
-    </script>
-  </body>
-</html>
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 0;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #1db954;
+}
+
+section {
+  padding: 100px 20px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Efek hover hanya aktif di project dan contact */
+body.project img:hover,
+body.contact img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* GIF di tengah dengan hover hanya di project & contact */
+.gif-center {
+  display: block;
+  margin: 40px auto;
+  width: 600px;
+  max-width: 90%;
+  min-width: 300px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+body.project .gif-center:hover,
+body.contact .gif-center:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Tombol theme toggle */
+#themeToggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+/* Light mode */
+body.light {
+  background-color: #f7f7f7;
+  color: #1a1a1a;
+}
+
+body.light nav {
+  background-color: #ffffff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body.light nav a {
+  color: #1a1a1a;
+}
+
+body.light nav a:hover {
+  color: #0077cc;
+}
+
+body.light.project img:hover,
+body.light.contact img:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.light #themeToggle {
+  color: #1a1a1a;
+}
+
+body.light.project .gif-center:hover,
+body.light.contact .gif-center:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Luffy Run Animation */
+@keyframes moveLuffy {
+  0% {
+    left: -150px;
+    filter: blur(2px);
+  }
+  50% {
+    filter: blur(0px);
+  }
+  100% {
+    left: 100%;
+    filter: blur(2px);
+  }
+}
+
+.luffy-run {
+  position: absolute;
+  top: 100px;
+  left: -150px;
+  width: 100px;
+  z-index: 2;
+  animation: moveLuffy 5s linear infinite;
+}
+
+/* NON-clickable di home (index.html) */
+body.home .luffy-run {
+  pointer-events: none;
+}
