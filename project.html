@@ -1,173 +1,65 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Project</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  </head>
 
-    header {
-      position: fixed;
-      top: 0;
-      right: 0;
-      padding: 20px;
-      z-index: 10;
-    }
+  <body class="project">
+    <header>
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </header>
 
-    .menu-toggle {
-      font-size: 24px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #ffffff;
-    }
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="biodata.html">Biodata</a>
+      <a href="project.html">Project</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-    nav {
-      position: fixed;
-      top: 0;
-      right: -220px;
-      height: 100%;
-      width: 200px;
-      background-color: #1f1f1f;
-      box-shadow: -2px 0 10px rgba(0,0,0,0.2);
-      padding: 60px 20px;
-      display: flex;
-      flex-direction: column;
-      transition: right 0.3s ease-in-out;
-    }
+    <main id="project">
+      <!-- Project: SumurTani -->
+      <section class="project">
+        <h2>SumurTani</h2>
+        <p>
+          Aplikasi bantu petani saat kekeringan dengan sistem marketplace. <br>
+          Saya berkontribusi sebagai team leader yang mengatur jadwal survey, observasi, dan evaluasi project. <br>
+          Saya juga ikut dalam proses desain UI/UX menggunakan FIGMA.
+        </p>
+        <div class="project-images">
+          <img src="sumurtani1.png" alt="Dokumentasi 1" />
+          <img src="sumurtani2.png" alt="Dokumentasi 2" />
+          <img src="sumurtani3.png" alt="Dokumentasi 3" />
+          <img src="sumurtani4.png" alt="Dokumentasi 4" />
+          <img src="sumurtani5.png" alt="Dokumentasi 5" />
+        </div>
+      </section>
 
-    nav.show {
-      right: 0;
-    }
+      <!-- Project: ClimaApp -->
+      <section class="project">
+        <h2>ClimaApp</h2>
+        <p>
+          Aplikasi yang membantu masyarakat dalam memonitor kebersihan air dan edukasi mengenai Emisi Karbon. <br>
+          Aplikasi ini diorganisir oleh Komunitas Lingkungan. Komunitas dan masyarakat bisa berkomunikasi dan berdonasi <br>
+          untuk kebutuhan Emisi Karbon dan lainnya.
+        </p>
+        <div class="project-images">
+          <img src="clima1.jpg" alt="Dokumentasi 1" />
+          <img src="clima2.PNG" alt="Dokumentasi 2" />
+          <img src="clima3.jpg" alt="Dokumentasi 3" />
+          <img src="clima4.jpg" alt="Dokumentasi 4" />
+          <img src="clima5.jpg" alt="Dokumentasi 5" />
+        </div>
+      </section>
+    </main>
 
-    nav a {
-      text-decoration: none;
-      color: #ffffff;
-      padding: 10px 0;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #1db954;
-    }
-
-    main {
-      flex: 1;
-      padding-top: 100px;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding-bottom: 40px;
-    }
-
-    .project {
-      margin-bottom: 60px;
-    }
-
-    .project-images {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 20px;
-      justify-content: flex-start;
-    }
-
-    .project-images img {
-      width: calc(33.33% - 10px); /* 3 gambar per baris */
-      min-width: 250px;
-      height: auto;
-      border-radius: 10px;
-      border: 2px solid #333;
-    }
-
-    @media (max-width: 800px) {
-      .project-images img {
-        width: calc(50% - 10px); /* 2 per baris di layar kecil */
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("show");
       }
-    }
-
-    @media (max-width: 500px) {
-      .project-images img {
-        width: 100%; /* 1 per baris di HP */
-      }
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1f1f1f;
-      color: #ffffff;
-      font-size: 14px;
-    }
-  </style>
-</head>
-<body class="project">
-  <header>
-    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-  </header>
-
-  <nav id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="biodata.html">Biodata</a>
-    <a href="project.html">Project</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <main id="project">
-    <section class="project">
-      <h2>SumurTani</h2>
-      <p>Aplikasi bantu petani saat kekeringan dengan sistem marketplace. <br>
-        Saya berkontribusi sebagai team leader yang mengatur jadwal survey, observasi, dan evaluasi project. <br>
-        Saya juga ikut dalam proses desain UI/UX menggunakan FIGMA.</p>
-      <div class="project-images">
-        <img src="sumurtani1.png" alt="Dokumentasi 1">
-        <img src="sumurtani2.png" alt="Dokumentasi 2">
-        <img src="sumurtani3.png" alt="Dokumentasi 3">
-        <img src="sumurtani4.png" alt="Dokumentasi 4">
-        <img src="sumurtani5.png" alt="Dokumentasi 5">
-      </div>
-    </section>
-
- <section class="project">
-  <h2>ClimaApp</h2>
-  <p>
-    Aplikasi yang membantu masyarakat dalam memonitor kebersihan air dan edukasi mengenai Emisi Karbon.<br>
-    Aplikasi ini diorganisir oleh Komunitas Lingkungan. Komunitas dan masyarakat bisa berkomunikasi dan berdonasi<br>
-    untuk kebutuhan Emisi Karbon dan lainnya.
-  </p>
-   
-  <div class="project-images estetik-grid">
-    <img src="clima1.jpg" alt="Dokumentasi 1" class="big">
-    <img src="clima2.PNG" alt="Dokumentasi 2">
-    <img src="clima3.jpg" alt="Dokumentasi 3" class="wide">
-    <img src="clima4.jpg" alt="Dokumentasi 4">
-    <img src="clima5.jpg" alt="Dokumentasi 5" class="tall">
-  </div>
-</section>
-
-
-  </main>
-
-  <footer class="footer">
-    &copy; 2025 dibuat dengan secangkir kopi ☕
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("navMenu").classList.toggle("show");
-    }
-  </script>
-</body>
+    </script>
+  </body>
 </html>
