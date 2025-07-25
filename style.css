@@ -166,3 +166,40 @@ main#project {
     width: 100%;
   }
 }
+
+/* Toggle Menu Slide In (Tanpa JS tambahan) */
+#navMenu {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 60px 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.4s ease;
+  z-index: 999;
+}
+
+#navMenu a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+#navMenu.show {
+  left: 0;
+}
+
+.menu-toggle {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  z-index: 1000;
+  position: relative;
+}
