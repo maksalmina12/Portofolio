@@ -207,3 +207,25 @@ body.home .luffy-run {
 .project-images img:hover {
   transform: scale(1.05);
 }
+/* Modal Preview Gambar di project.html */
+body.project-page .img-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+body.project-page .img-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+  transition: transform 0.3s ease;
+}
