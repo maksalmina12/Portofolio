@@ -56,9 +56,10 @@
     </section>
   </main>
 
-  <!-- Modal Preview Gambar -->
-  <div id="imgModal" class="img-modal" onclick="closePreview()">
-    <img id="imgModalContent" />
+  <!-- Modal Preview -->
+  <div id="imgModal" class="img-modal">
+    <span class="close-btn" onclick="closePreview()">❮</span>
+    <img id="imgModalContent" src="" alt="Preview" />
   </div>
 
   <script>
@@ -73,7 +74,18 @@
 
     function closePreview() {
       document.getElementById("imgModal").style.display = "none";
+      document.getElementById("imgModalContent").src = "";
     }
+
+    // Tutup modal dengan ESC atau F
+    document.addEventListener("keydown", function(event) {
+      const modal = document.getElementById("imgModal");
+      if (modal.style.display === "flex") {
+        if (event.key === "Escape" || event.key.toLowerCase() === "f") {
+          closePreview();
+        }
+      }
+    });
   </script>
 </body>
 </html>
