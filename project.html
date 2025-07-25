@@ -1,14 +1,119 @@
 <!DOCTYPE html>
 <html lang="id">
-<body class="project">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Project</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 20px;
+      z-index: 10;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      right: -220px;
+      height: 100%;
+      width: 200px;
+      background-color: #1f1f1f;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.3s ease-in-out;
+      z-index: 5;
+    }
+
+    nav.show {
+      right: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 10px 0;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #1db954;
+    }
+
+    main {
+      padding-top: 80px;
+      padding-bottom: 20px;
+      flex: 1;
+    }
+
+    .project {
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .project h2 {
+      color: #1db954;
+    }
+
+    .project p {
+      line-height: 1.6;
+    }
+
+    .project-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .project-images img {
+      max-width: 180px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-images img:hover {
+      transform: scale(1.05);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      color: #aaa;
+      font-size: 14px;
+      border-top: 1px solid #333;
+    }
+  </style>
 </head>
-<body>
+
+<body class="project">
   <header>
     <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
   </header>
@@ -20,12 +125,14 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <main id="project">
+  <main>
     <section class="project">
       <h2>SumurTani</h2>
-      <p> Aplikasi bantu petani saat kekeringan dengan sistem marketplace. <br>
+      <p>
+        Aplikasi bantu petani saat kekeringan dengan sistem marketplace. <br>
         Saya berkontribusi sebagai team leader yang mengatur jadwal survey, observasi, dan evaluasi project. <br>
-        Saya juga ikut dalam proses desain UI/UX menggunakan FIGMA..</p>
+        Saya juga ikut dalam proses desain UI/UX menggunakan FIGMA.
+      </p>
       <div class="project-images">
         <img src="sumurtani1.png" alt="Dokumentasi 1">
         <img src="sumurtani2.png" alt="Dokumentasi 2">
@@ -37,9 +144,10 @@
 
     <section class="project">
       <h2>ClimaApp</h2>
-      <p> Aplikasi yang membantu Masyarakat dalam memonitor kebersihan air dan edukasi mengenai Emisi Karbon,<br>
-       yang dimana aplikasi ini dioorganisir oleh Komunitas Lingkungan. Komunitas Lingkungan dan Masyarakat dapat berkomunikasi dan bisa berdonasi <br>
-       untuk kebutuhan Emisi Karbon dan yang lainnya.</p>
+      <p>
+        Aplikasi yang membantu masyarakat dalam memonitor kebersihan air dan edukasi mengenai Emisi Karbon.<br>
+        Aplikasi ini dioorganisir oleh Komunitas Lingkungan. Komunitas dan masyarakat dapat berkomunikasi serta berdonasi untuk kebutuhan lingkungan.
+      </p>
       <div class="project-images">
         <img src="clima1.jpg" alt="Dokumentasi 1">
         <img src="clima2.PNG" alt="Dokumentasi 2">
@@ -48,11 +156,11 @@
         <img src="clima5.jpg" alt="Dokumentasi 5">
       </div>
     </section>
+  </main>
 
   <footer class="footer">
     &copy; 2025 dibuat dengan secangkir kopi ☕
   </footer>
-  </main>
 
   <script>
     function toggleMenu() {
