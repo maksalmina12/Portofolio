@@ -166,23 +166,41 @@ main#project {
     width: 100%;
   }
 }
+/* Toggle menu icon */
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
 
+/* Navigation menu (hidden by default) */
 #navMenu {
   position: fixed;
   top: 0;
-  right: -200px; /* slide dari kanan */
+  right: -220px; /* start off screen to the right */
   width: 200px;
   height: 100%;
   background-color: #1e1e1e;
+  color: white;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  gap: 20px;
   padding: 60px 20px;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-  transition: right 0.4s ease;
-  z-index: 999;
+  transition: right 0.4s ease-in-out;
+  z-index: 1000;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
+/* When toggled (show), slide it in */
 #navMenu.show {
   right: 0;
 }
+
+/* Navigation link styles */
+#navMenu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight:
