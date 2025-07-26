@@ -1,92 +1,130 @@
-body.contact-page {
-  font-family: 'Poppins', sans-serif;
-  background-color: #121212;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  min-height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body.contact-page {
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 200px;
-  background-color: #1f1f1f;
-  padding-top: 60px;
-}
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 200px;
+      background-color: #1f1f1f;
+      padding-top: 60px;
+    }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
 
-.sidebar ul li {
-  margin: 20px 0;
-  text-align: center;
-}
+    .sidebar ul li {
+      margin: 20px 0;
+      text-align: center;
+    }
 
-.sidebar ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
 
-.sidebar ul li a:hover,
-.sidebar ul li a.active {
-  color: #1db954;
-}
+    .sidebar ul li a:hover,
+    .sidebar ul li a.active {
+      color: #1db954;
+    }
 
-.contact-content {
-  margin-left: 200px;
-  padding: 60px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  text-align: center;
-}
+    .contact-content {
+      margin-left: 200px;
+      padding: 60px 20px;
+      flex: 1;
+    }
 
-.contact-content h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
+    .contact-content h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
 
-.contact-content p {
-  font-size: 16px;
-  max-width: 600px;
-  line-height: 1.6;
-}
+    .contact-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 600px;
+    }
 
-.social-links {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+    .social-links {
+      margin-top: 30px;
+    }
 
-.social-links a {
-  color: #1db954;
-  font-size: 28px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
+    .social-links a {
+      color: #1db954;
+      margin-right: 20px;
+      font-size: 24px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
 
-.social-links a:hover {
-  transform: scale(1.2);
-}
+    .social-links a:hover {
+      transform: scale(1.2);
+    }
 
-footer {
-  margin-left: 200px;
-  background-color: #1a1a1a;
-  color: #aaa;
-  font-size: 14px;
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #333;
-}
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      color: #aaa;
+      font-size: 14px;
+      border-top: 1px solid #333;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body class="contact-page">
+
+  <nav class="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="biodata.html">Biodata</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="contact-content">
+    <h1>Hubungi Saya</h1>
+    <p>Anda dapat menghubungi saya melalui platform berikut. Terbuka untuk kolaborasi, pertanyaan, atau sekadar menyapa.</p>
+
+    <div class="social-links">
+      <a href="https://facebook.com/akunmu" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/akunmu" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/akunmu" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/akunmu" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://youtube.com/c/akunmu" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://github.com/akunmu" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dibuat dengan secangkir kopi <span>☕</span></p>
+  </footer>
+
+</body>
+</html>
