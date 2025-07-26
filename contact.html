@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-<body class="contact">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,16 +53,21 @@
     }
   </style>
 </head>
-<body>
+<body class="contact">
   <header>
     <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
   </header>
-  <nav id="navMenu">
+
+  <!-- Slide Menu -->
+  <nav id="navMenu" class="slide-menu">
     <a href="index.html">Home</a>
     <a href="biodata.html">Biodata</a>
     <a href="project.html">Project</a>
     <a href="contact.html">Contact</a>
   </nav>
+
+  <!-- Overlay yang bisa diklik untuk menutup menu -->
+  <div class="popup-overlay" onclick="toggleMenu()"></div>
 
   <section id="contact">
     <div class="contact-heading">Hubungi Saya</div>
@@ -71,10 +75,10 @@
       Anda dapat menghubungi saya melalui platform berikut. Saya terbuka untuk kolaborasi, pertanyaan, atau sekadar menyapa.
     </div>
     <div class="contact-icons">
-      <a href="maksalbusiness@gmail.com" title="Email">📧</a>
+      <a href="mailto:maksalbusiness@gmail.com" title="Email">📧</a>
       <a href="https://instagram.com/mksllll" title="Instagram">📷</a>
       <a href="https://facebook.com/mksllll" title="Facebook">📘</a>
-      <a href="https://linkedin.com/in/MAKSALMINA ARINA" title="LinkedIn">💼</a>
+      <a href="https://linkedin.com/in/MAKSALMINA%20ARINA" title="LinkedIn">💼</a>
     </div>
   </section>
   
@@ -84,7 +88,13 @@
   
   <script>
     function toggleMenu() {
-      document.getElementById('navMenu').classList.toggle('show');
+      const menu = document.getElementById('navMenu');
+      const overlay = document.querySelector('.popup-overlay');
+      const body = document.body;
+
+      menu.classList.toggle('show');
+      overlay.classList.toggle('show');
+      body.classList.toggle('menu-open');
     }
   </script>
 </body>
