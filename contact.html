@@ -1,115 +1,128 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontak</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
   <style>
-    #contact {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      background: none;
+      color: white;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    .slide-menu {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #1e1e1e;
+      padding-top: 60px;
+      transition: 0.3s;
+      z-index: 1000;
+    }
+
+    .slide-menu a {
+      display: block;
+      padding: 16px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .slide-menu a:hover {
+      background-color: #333;
+    }
+
+    .slide-menu.show {
+      right: 0;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: none;
+      z-index: 900;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
+    main {
       text-align: center;
-      padding: 100px 20px;
+      padding: 100px 20px 40px;
     }
 
-    .contact-icons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
+    h1 {
+      font-size: 2em;
+      color: cyan;
+      border-bottom: 2px solid cyan;
+      display: inline-block;
+      margin-bottom: 10px;
     }
 
-    .contact-icons a {
-      font-size: 40px;
-      background: linear-gradient(135deg, #1a1a1a, #333);
-      padding: 20px;
-      border-radius: 50%;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
+    .contact-icons img {
+      width: 64px;
+      margin: 20px;
+      transition: transform 0.3s ease;
     }
 
-    .contact-icons a:hover {
+    .contact-icons img:hover {
       transform: scale(1.2);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
     }
 
-    .contact-heading {
-      font-size: 32px;
-      color: #00ffff;
-      border-bottom: 2px solid #00ffff;
-      padding-bottom: 10px;
-    }
-
-    .contact-description {
-      font-size: 16px;
-      max-width: 600px;
-      line-height: 1.6;
-      color: #cccccc;
+    footer {
+      text-align: left;
+      padding: 20px;
+      font-size: 14px;
+      color: #aaa;
     }
   </style>
 </head>
-<body class="contact">
-  <header>
-    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-  </header>
+<body>
 
-  <!-- Slide Menu -->
-  <nav id="navMenu" class="slide-menu">
+  <div class="menu-toggle" onclick="document.querySelector('.slide-menu').classList.add('show'); document.querySelector('.overlay').classList.add('show');">&#9776;</div>
+
+  <div class="slide-menu">
     <a href="index.html">Home</a>
     <a href="biodata.html">Biodata</a>
     <a href="project.html">Project</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <a href="contact.html"><strong>Contact</strong></a>
+  </div>
 
-  <!-- Overlay -->
-  <div class="popup-overlay" onclick="toggleMenu()"></div>
+  <div class="overlay" onclick="document.querySelector('.slide-menu').classList.remove('show'); this.classList.remove('show');"></div>
 
-  <section id="contact">
-    <div class="contact-heading">Hubungi Saya</div>
-    <div class="contact-description">
-      Anda dapat menghubungi saya melalui platform berikut. Saya terbuka untuk kolaborasi, pertanyaan, atau sekadar menyapa.
-    </div>
+  <main>
+    <h1>Hubungi Saya</h1>
+    <p>Anda dapat menghubungi saya melalui platform berikut. Saya terbuka untuk kolaborasi, pertanyaan, atau sekadar menyapa.</p>
     <div class="contact-icons">
-      <a href="mailto:maksalbusiness@gmail.com" title="Email">📧</a>
-      <a href="https://instagram.com/mksllll" title="Instagram">📷</a>
-      <a href="https://facebook.com/mksllll" title="Facebook">📘</a>
-      <a href="https://linkedin.com/in/MAKSALMINA%20ARINA" title="LinkedIn">💼</a>
+      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" />
+      <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Instagram" />
+      <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" />
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="Medium" />
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111738.png" alt="Portfolio" />
     </div>
-  </section>
-  
-  <footer class="footer">
-    &copy; 2025 dibuat dengan secangkir kopi ☕
+  </main>
+
+  <footer>
+    © 2025 dibuat dengan secangkir kopi ☕
   </footer>
-  
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('navMenu');
-      const overlay = document.querySelector('.popup-overlay');
-      const body = document.body;
-
-      menu.classList.toggle('show');
-      overlay.classList.toggle('show');
-      body.classList.toggle('menu-open');
-    }
-
-    // Tutup menu jika klik di luar menu dan toggle
-    document.addEventListener('click', function(e) {
-      const menu = document.getElementById('navMenu');
-      const toggle = document.querySelector('.menu-toggle');
-      const overlay = document.querySelector('.popup-overlay');
-
-      const isClickInsideMenu = menu.contains(e.target);
-      const isClickToggle = toggle.contains(e.target);
-
-      if (!isClickInsideMenu && !isClickToggle && document.body.classList.contains('menu-open')) {
-        toggleMenu();
-      }
-    });
-  </script>
 </body>
 </html>
