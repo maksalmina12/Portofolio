@@ -66,7 +66,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Overlay yang bisa diklik untuk menutup menu -->
+  <!-- Overlay -->
   <div class="popup-overlay" onclick="toggleMenu()"></div>
 
   <section id="contact">
@@ -96,6 +96,20 @@
       overlay.classList.toggle('show');
       body.classList.toggle('menu-open');
     }
+
+    // Tutup menu jika klik di luar menu dan toggle
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('navMenu');
+      const toggle = document.querySelector('.menu-toggle');
+      const overlay = document.querySelector('.popup-overlay');
+
+      const isClickInsideMenu = menu.contains(e.target);
+      const isClickToggle = toggle.contains(e.target);
+
+      if (!isClickInsideMenu && !isClickToggle && document.body.classList.contains('menu-open')) {
+        toggleMenu();
+      }
+    });
   </script>
 </body>
 </html>
