@@ -1,128 +1,51 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-    }
-
-    .menu-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      font-size: 30px;
-      background: none;
-      color: white;
-      cursor: pointer;
-      z-index: 1100;
-    }
-
-    .slide-menu {
-      position: fixed;
-      top: 0;
-      right: -250px;
-      width: 250px;
-      height: 100%;
-      background-color: #1e1e1e;
-      padding-top: 60px;
-      transition: 0.3s;
-      z-index: 1000;
-    }
-
-    .slide-menu a {
-      display: block;
-      padding: 16px;
-      text-decoration: none;
-      color: #fff;
-    }
-
-    .slide-menu a:hover {
-      background-color: #333;
-    }
-
-    .slide-menu.show {
-      right: 0;
-    }
-
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-      display: none;
-      z-index: 900;
-    }
-
-    .overlay.show {
-      display: block;
-    }
-
-    main {
-      text-align: center;
-      padding: 100px 20px 40px;
-    }
-
-    h1 {
-      font-size: 2em;
-      color: cyan;
-      border-bottom: 2px solid cyan;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-
-    .contact-icons img {
-      width: 64px;
-      margin: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    .contact-icons img:hover {
-      transform: scale(1.2);
-    }
-
-    footer {
-      text-align: left;
-      padding: 20px;
-      font-size: 14px;
-      color: #aaa;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak Saya</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="contact-page">
 
-  <div class="menu-toggle" onclick="document.querySelector('.slide-menu').classList.add('show'); document.querySelector('.overlay').classList.add('show');">&#9776;</div>
+  <nav class="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="biodata.html">Biodata</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
 
-  <div class="slide-menu">
-    <a href="index.html">Home</a>
-    <a href="biodata.html">Biodata</a>
-    <a href="project.html">Project</a>
-    <a href="contact.html"><strong>Contact</strong></a>
-  </div>
+  <header>
+    <h1 class="contact-title">Hubungi Saya</h1>
+    <p class="contact-desc">Anda dapat menghubungi saya melalui platform berikut. Terbuka untuk kolaborasi, pertanyaan, atau sekadar menyapa.</p>
+  </header>
 
-  <div class="overlay" onclick="document.querySelector('.slide-menu').classList.remove('show'); this.classList.remove('show');"></div>
-
-  <main>
-    <h1>Hubungi Saya</h1>
-    <p>Anda dapat menghubungi saya melalui platform berikut. Saya terbuka untuk kolaborasi, pertanyaan, atau sekadar menyapa.</p>
+  <main class="contact-container">
     <div class="contact-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" />
-      <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Instagram" />
-      <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" />
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="Medium" />
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111738.png" alt="Portfolio" />
+      <a href="mailto:youremail@example.com" class="contact-icon" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://instagram.com/username" class="contact-icon" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://linkedin.com/in/username" class="contact-icon" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/username" class="contact-icon" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
   </main>
 
-  <footer>
-    © 2025 dibuat dengan secangkir kopi ☕
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Dibuat dengan secangkir kopi ☕</p>
+    </div>
   </footer>
+
 </body>
 </html>
