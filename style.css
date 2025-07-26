@@ -1,75 +1,205 @@
-/* BASE TAMBAHAN YANG DIPERBAIKI */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;600&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
+/* General Reset & Base */
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: 'Inter', sans-serif;
   background-color: #121212;
   color: #ffffff;
-}
-
-/* SIDEBAR */
-.sidebar {
-  background-color: #1f1f1f;
-  padding: 1.5rem;
-  width: 180px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-}
-
-.sidebar ul {
-  list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-.sidebar li {
-  margin: 15px 0;
-}
-
-.sidebar a {
-  color: #fff;
+a {
   text-decoration: none;
+  color: inherit;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 1000;
+}
+
+/* Toggle menu icon */
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  z-index: 1100;
+}
+
+/* Navigation menu (hidden by default) */
+#navMenu {
+  position: fixed;
+  top: 0;
+  right: -220px;
+  width: 200px;
+  height: 100%;
+  background-color: #1e1e1e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 60px 20px;
+  transition: right 0.4s ease-in-out;
+  z-index: 1000;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#navMenu.show {
+  right: 0;
+}
+
+/* Navigation link styles */
+#navMenu a {
+  text-decoration: none;
+  color: #ffffff;
   font-weight: 600;
-  transition: color 0.3s;
 }
 
-.sidebar a:hover,
-.sidebar a.active {
-  color: #00aaff;
+/* Project Section */
+main#project {
+  padding: 100px 20px 40px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* CONTACT SECTION */
+.project {
+  margin-bottom: 60px;
+}
+
+.project h2 {
+  font-size: 28px;
+  color: #00ffd5;
+  margin-bottom: 10px;
+}
+
+.project p {
+  line-height: 1.6;
+}
+
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.project-images img {
+  width: calc(33.333% - 10px);
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Popup Preview Style */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-overlay.show {
+  display: flex;
+}
+
+.popup-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.4);
+  transition: transform 0.3s ease;
+}
+
+/* Tombol keluar ❮ */
+.popup-close {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 32px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 10000;
+}
+
+.popup-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========================= */
+/*        CONTACT STYLE      */
+/* ========================= */
+
 .contact-content {
   margin-left: 200px;
   padding: 2rem;
+  text-align: center;
 }
 
 .contact-content h1 {
   font-size: 2.2rem;
   margin-bottom: 1rem;
+  color: #00ffd5;
 }
 
 .contact-content p {
   font-size: 1rem;
   line-height: 1.6;
   max-width: 600px;
+  margin: 0 auto;
+  color: #ccc;
 }
+
+/* ========================= */
+/*     SOCIAL MEDIA LINKS   */
+/* ========================= */
 
 .social-links {
   margin-top: 1.5rem;
   display: flex;
-  gap: 18px;
-  align-items: center;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .social-links a {
-  color: #fff;
-  font-size: 1.5rem;
-  transition: transform 0.3s, color 0.3s;
+  color: #ffffff;
+  font-size: 1.7rem;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover {
@@ -77,7 +207,10 @@ body {
   transform: scale(1.2);
 }
 
-/* FOOTER */
+/* ========================= */
+/*          FOOTER           */
+/* ========================= */
+
 footer {
   text-align: center;
   padding: 1rem;
@@ -86,16 +219,21 @@ footer {
   font-size: 0.9rem;
   position: fixed;
   bottom: 0;
-  left: 200px;
+  left: 0;
   right: 0;
   border-top: 1px solid #333;
+  z-index: 999;
 }
 
-/* RESPONSIVE LAYOUT */
+/* Responsive */
 @media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    position: relative;
+  .project-images img {
+    width: calc(50% - 10px);
+  }
+
+  .popup-close {
+    font-size: 28px;
+    padding: 8px 14px;
   }
 
   .contact-content {
@@ -104,6 +242,12 @@ footer {
   }
 
   footer {
-    left: 0;
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-images img {
+    width: 100%;
   }
 }
