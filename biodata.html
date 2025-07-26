@@ -22,6 +22,7 @@
       top: 0;
       right: 0;
       padding: 20px;
+      z-index: 1001;
     }
 
     .menu-toggle {
@@ -30,6 +31,8 @@
       border: none;
       cursor: pointer;
       color: #ffffff;
+      z-index: 1001;
+      position: relative;
     }
 
     nav {
@@ -44,6 +47,7 @@
       display: flex;
       flex-direction: column;
       transition: right 0.3s ease-in-out;
+      z-index: 1000;
     }
 
     nav.show {
@@ -60,6 +64,18 @@
 
     nav a:hover {
       color: #1db954;
+    }
+
+    .menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 900;
+    }
+
+    nav.show ~ .menu-overlay {
+      display: block;
     }
 
     #biodata {
@@ -106,6 +122,8 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <div class="menu-overlay" onclick="closeMenu()"></div>
+
   <section id="biodata">
     <img src="IMG_20230712_152806.jpg" alt="Foto Profil" class="profile-img">
     <div class="info">
@@ -122,7 +140,12 @@
 
   <script>
     function toggleMenu() {
-      document.getElementById('navMenu').classList.toggle('show');
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('show');
+    }
+
+    function closeMenu() {
+      document.getElementById('navMenu').classList.remove('show');
     }
   </script>
 </body>
