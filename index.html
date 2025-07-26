@@ -29,6 +29,10 @@
       border: none;
       cursor: pointer;
       color: #ffffff;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1001; /* Lebih tinggi dari nav */
     }
 
     nav {
@@ -43,6 +47,7 @@
       display: flex;
       flex-direction: column;
       transition: right 0.3s ease-in-out;
+      z-index: 1000;
     }
 
     nav.show {
@@ -131,13 +136,13 @@
 </head>
 <body>
   <header>
-    <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   </header>
 
-<!-- GIF Luffy berjalan -->
-<img class="luffy-run"
-     src="https://raw.githubusercontent.com/maksalmina12/Portofolio/main/luffy_run.gif"
-     alt="Luffy Run" />
+  <!-- GIF Luffy berjalan -->
+  <img class="luffy-run"
+       src="https://raw.githubusercontent.com/maksalmina12/Portofolio/main/luffy_run.gif"
+       alt="Luffy Run" />
 
   <nav id="navMenu">
     <a href="index.html">Home</a>
@@ -162,7 +167,16 @@
 
   <script>
     function toggleMenu() {
-      document.getElementById('navMenu').classList.toggle('show');
+      const nav = document.getElementById('navMenu');
+      const btn = document.querySelector('.menu-toggle');
+      nav.classList.toggle('show');
+
+      // Ganti ikon toggle antara ☰ dan ✖
+      if (nav.classList.contains('show')) {
+        btn.innerHTML = '&times;';
+      } else {
+        btn.innerHTML = '&#9776;';
+      }
     }
   </script>
 </body>
