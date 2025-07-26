@@ -32,7 +32,7 @@
       position: fixed;
       top: 20px;
       right: 20px;
-      z-index: 1001; /* Lebih tinggi dari nav */
+      z-index: 1001;
     }
 
     nav {
@@ -64,6 +64,19 @@
 
     nav a:hover {
       color: #1db954;
+    }
+
+    /* Overlay hitam saat menu terbuka */
+    .menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 900;
+    }
+
+    nav.show ~ .menu-overlay {
+      display: block;
     }
 
     #home {
@@ -144,12 +157,16 @@
        src="https://raw.githubusercontent.com/maksalmina12/Portofolio/main/luffy_run.gif"
        alt="Luffy Run" />
 
+  <!-- Navigasi -->
   <nav id="navMenu">
     <a href="index.html">Home</a>
     <a href="biodata.html">Biodata</a>
     <a href="project.html">Project</a>
     <a href="contact.html">Contact</a>
   </nav>
+
+  <!-- Overlay untuk klik di luar menu -->
+  <div class="menu-overlay" onclick="toggleMenu()"></div>
 
   <section id="home">
     <div class="welcome-text">Selamat Datang di Portofolio Saya</div>
@@ -172,11 +189,7 @@
       nav.classList.toggle('show');
 
       // Ganti ikon toggle antara ☰ dan ✖
-      if (nav.classList.contains('show')) {
-        btn.innerHTML = '&times;';
-      } else {
-        btn.innerHTML = '&#9776;';
-      }
+      btn.innerHTML = nav.classList.contains('show') ? '&times;' : '&#9776;';
     }
   </script>
 </body>
