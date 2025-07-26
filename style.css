@@ -63,6 +63,20 @@ header {
   font-weight: 600;
 }
 
+/* Overlay when nav is open */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 900;
+}
+
+/* Show overlay only when toggle is checked */
+#menu-toggle:checked ~ .menu-overlay {
+  display: block;
+}
+
 /* Project Section */
 main#project {
   padding: 100px 20px 40px;
